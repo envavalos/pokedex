@@ -36,3 +36,61 @@
     transform: rotate(360deg);
   }
 }
+
+.main-layout {
+  max-width: 450px;       /* Ancho típico de un smartphone */
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #949494; /* MODIFICADO: Fondo oscuro para que luzcan los detalles */
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+  /* NUEVAS LÍNEAS CRÍTICAS: Enganchan la animación dentro del móvil */
+  position: relative; 
+  overflow: hidden;   
+}
+
+.container {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto; /* Permite scroll solo en el contenido */
+}
+
+/* Header estilo App */
+.header {
+  background-color: #ef5350; /* Rojo Pokéball */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas fijas */
+  gap: 15px;
+}
+
+.pokemon-card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border: 1px solid #eee;
+}
+
+.pokemon-card img {
+  width: 100%; /* Se adapta al ancho de la columna */
+  max-width: 120px;
+}
+
+.pokemon-card p {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #444;
+}

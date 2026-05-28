@@ -1,0 +1,155 @@
+.detail-container {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.loading-state {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-weight: bold;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: white;
+  background-color: #ef5350;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: inline-block;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(56, 56, 56, 0.3);
+  align-self: flex-start;
+}
+
+.pokemon-detail-card {
+  background: #5e5e5e;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  position: relative;
+  border: 1px solid #2c2c2c;
+}
+
+.pokemon-detail-card h2 {
+  color: white;
+  margin: 10px 0;
+}
+
+.detail-id {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-weight: bold;
+  color: #444444;
+  font-size: 1.2rem;
+}
+
+.pokemon-detail-card img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+}
+
+.types-container {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.type-badge {
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.type-badge.grass { background-color: #5FBD58; }
+.type-badge.poison { background-color: #B763CF; }
+.type-badge.fire { background-color: #FF9D55; }
+.type-badge.water { background-color: #539DDF; }
+.type-badge.flying { background-color: #8FA8DD; }
+.type-badge.bug { background-color: #92BC2C; }
+.type-badge.normal { background-color: #A0A29F; }
+.type-badge.electric { background-color: #F2D94E; color: #333; }
+
+.stats-container {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.stats-container h3 {
+  border-bottom: 2px solid #2c2c2c;
+  padding-bottom: 6px;
+  color: #ffffff;
+  font-size: 1rem;
+}
+
+.stat-row {
+  margin: 12px 0;
+}
+
+.stat-name {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #aaaaaa;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-bar-bg {
+  background: #2c2c2c;
+  border-radius: 10px;
+  height: 18px;
+}
+
+.stat-bar-fill {
+  background: linear-gradient(90deg, #ef5350, #ff7674);
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  box-sizing: border-box;
+}
+
+.stat-num {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+/* Botón Shiny de la pantalla de detalles */
+.detail-shiny-btn {
+  background-color: #2c2c2c;
+  color: #f2d94e;
+  border: 2px solid #f2d94e;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+}
+
+/* Efecto cuando se activa el modo variocolor en detalles */
+.detail-shiny-btn.active {
+  background: linear-gradient(135deg, #f2d94e, #ffb700);
+  color: #121212;
+  border-color: #ffb700;
+  box-shadow: 0 0 10px rgba(242, 217, 78, 0.5);
+}
+
+/* Un sutil brillo extra para la ilustración Shiny */
+.detail-pokemon-img.shiny-effect {
+  filter: drop-shadow(0 0 15px rgba(242, 217, 78, 0.25));
+}
